@@ -1,34 +1,27 @@
 <?php get_header(); ?>
 
-	<?php get_template_part( 'parts/nav-page' ); ?>
 	<main class="main">
 
-		<div class="container">
-			<div class="breadcrumbs">
-				<a href="<?php echo get_home_url(); ?>">Головна</a>
-				<span>-</span>
-				<span>Нажаль данна сторінка не знайдена!</span>
-			</div>
-		</div>
+		<section class="hero error-page" id="hero">
+			<div class="container error-page__container hero__container">
 
-		<section class="page--hero">
-			<div class="container">
+				<a href="<?php echo get_home_url(); ?>/#about" class="error-page__logo">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo">
+					<div class="hero__logo_text">
+						<p>prokarandash</p>
+						<span>Онлайн школа рисунка</span>
+					</div>
+				</a>
 
-				<div class="page--hero__page">
-
-					<h2>Нажаль данна сторінка не знайдена!</h2>
-					<a href="<?php echo get_home_url(); ?>" class="btn">Головна</a>
-
+				<h1>К сожалению данная страница не найдена!</h1>
+					
+				<div class="">
+					<a href="<?php echo get_home_url(); ?>" class="btn hero__btn">Главная</a>
 				</div>
 
 			</div>
 		</section>
-
-		<?php get_template_part( 'parts/info' ); ?>
 		
 	</main>
-
-	<?php get_template_part( 'parts/footer-page' ); ?>
-
 
 <?php get_footer(); ?>

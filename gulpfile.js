@@ -37,8 +37,8 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'pancile/assets/libs/jquery/dist/jquery.min.js',  			//----jquery
-		// 'pancile/assets/libs/jquery.validate.js', 					//----форма
-		// 'pancile/assets/libs/jquery.mask.min.js', 					//----форма
+		'pancile/assets/libs/jquery.validate.js', 					//----форма
+		'pancile/assets/libs/jquery.mask.min.js', 					//----форма
 		// 'pancile/assets/libs/jscrollpane/jquery.jscrollpane.js',
 		// 'pancile/assets/libs/jscrollpane/jquery.mousewheel.js',
 		'pancile/assets/libs/jquery.popupoverlay.js', 				//----модалки

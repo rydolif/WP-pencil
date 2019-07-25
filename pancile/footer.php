@@ -25,9 +25,13 @@
 
 			<div class="footer__soc">
 				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/email.png" alt="" class="footer__soc_adp"></a>
-				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/email.png" alt="">adress@gmail.com</a>
-				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.png" alt=""></a>
-				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/vk.png" alt=""></a>
+				<a href="mailto:<?php the_field('mail'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/email.png" alt=""><?php the_field('mail'); ?></a>
+				<a href="<?php the_field('in'); ?>" target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.png" alt="">
+				</a>
+				<a href="<?php the_field('vk'); ?>" target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vk.png" alt="">
+				</a>
 			</div>
 
 			<div class="footer__up click">
@@ -40,7 +44,7 @@
 	<!-- modal -->
 		<div class="modal" id="thanks">
 			<button class="close thanks_close" type="button"></button>
-			<h3>Спасибо <br>за доверие!</h3>
+			<h3>Спасибо за доверие!</h3>
 			<p>Мы обязательно с вами свяжемся!</p>
 		</div>
 	<!-- modal-end -->

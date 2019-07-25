@@ -19,7 +19,7 @@
 						
 					</div>
 
-					<h1>Техника рисунка<br> цветными карандашами</h1>
+					<h1><?php the_field('title'); ?></h1>
 
 					<ul>
 						<li><span>+</span>Старт занятий 01.08.2019</li>
@@ -137,54 +137,26 @@
 			<div class="container">
 
 				<h2>работы учеников</h2>
-				
-				<div class="swiper-container works__slider">
-					<div class="swiper-wrapper">
 
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews1.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews1.png" alt=""></a>
+				<?php if( have_rows('works') ): ?>
+					<div class="swiper-container works__slider">
+						<div class="swiper-wrapper">
+							<?php while( have_rows('works') ): the_row(); 
+								$url = get_sub_field('url');
+							?>
+
+								<div class="swiper-slide">
+									<a href="<?php echo $url; ?>" data-fancybox="gallery">
+										<img src="<?php echo $url; ?>" alt="">
+									</a>
+								</div>
+
+							<?php endwhile; ?>
 						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews2.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews2.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews3.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews3.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews4.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews4.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews5.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews5.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews1.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews1.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews2.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews2.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews3.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews3.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews4.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews4.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/reviews5.png" data-fancybox="gallery"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews5.png" alt=""></a>
-						</div>
-
+						<div class="swiper-pagination works__prev"></div>
 					</div>
+				<?php endif; ?>
 
-					<div class="swiper-pagination works__prev"></div>
-				</div>
 			</div>
 		</section>
 
@@ -194,47 +166,36 @@
 				
 				<div class="reviews__title"><h2>Отзывы наших учеников</h2></div>
 			
-				<div class="swiper-container reviews__slider">
-					<div class="swiper-wrapper">
+				<?php if( have_rows('reviews') ): ?>
+					<div class="swiper-container reviews__slider">
+						<div class="swiper-wrapper">
+							<?php while( have_rows('reviews') ): the_row(); 
+								$text = get_sub_field('text');
+								$name = get_sub_field('name');
+								$date = get_sub_field('date');
+								$img = get_sub_field('img');
+							?>
 
-						<div class="swiper-slide reviews__slide">
-							<div class="reviews__slide_wrap">
-								<p>Большое спасибо за столь подробные уроки! Цветными карандашами рисую около 2-х лет, но тем не менее узнала много нового, а практические задания помогли лучше понять материал</p>
-								<div class="reviews__slide_info">
-									<p>Алиса <time datetime="2018-07-24">24/07/2018</time></p>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/alisa.png" alt="">
+								<div class="swiper-slide reviews__slide">
+									<div class="reviews__slide_wrap">
+										<p>
+											<?php echo $text; ?>
+										</p>
+										<div class="reviews__slide_info">
+											<p><?php echo $name; ?> <time datetime="2018-07-24"><?php echo $date; ?></time></p>
+											<img src="<?php echo $img; ?>" alt="">
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
 
-						<div class="swiper-slide reviews__slide">
-							<div class="reviews__slide_wrap">
-								<p>Большое спасибо за столь подробные уроки! Цветными карандашами рисую около 2-х лет, но тем не менее узнала много нового, а практические задания помогли лучше понять материал</p>
-								<div class="reviews__slide_info">
-									<p>Алиса <time datetime="2018-07-24">24/07/2018</time></p>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/alisa.png" alt="">
-								</div>
-							</div>
+							<?php endwhile; ?>
 						</div>
-
-						<div class="swiper-slide reviews__slide">
-							<div class="reviews__slide_wrap">
-								<p>Большое спасибо за столь подробные уроки! Цветными карандашами рисую около 2-х лет, но тем не менее узнала много нового, а практические задания помогли лучше понять материал</p>
-								<div class="reviews__slide_info">
-									<p>Алиса <time datetime="2018-07-24">24/07/2018</time></p>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/alisa.png" alt="">
-								</div>
-							</div>
-						</div>
-
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
 					</div>
+				<?php endif; ?>
 
-					<div class="swiper-pagination"></div>
-
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-
-				</div>
 			</div>
 		</section>
 
@@ -351,10 +312,10 @@
 			</div>
 		</section>
 
-		<section class="tabs" id="tabs">
+		<section class="tabs">
 			<div class="container tabs__container">
 
-				<h2>Программа курса</h2>
+				<h2 id="tabs">Программа курса</h2>
 				
 				<ul class="tabs__cover">
 					<li><a href="#" class="active"><span>Часть 1.</span>Основы графики</a></li>
@@ -375,119 +336,31 @@
 			<div class="kurs__container container">
 				<h2>Содержание уроков 1 часть</h2>
 
-				<div class="swiper-container kurs__slider">
-					<div class="swiper-wrapper">
+				<?php if( have_rows('lesson1') ): ?>
+					<div class="swiper-container kurs__slider">
+						<div class="swiper-wrapper">
+							<?php while( have_rows('lesson1') ): the_row(); 
+								$img = get_sub_field('img');
+								$title = get_sub_field('title');
+								$text = get_sub_field('text');
+							?>
+							
+							<div class="kurs__slider_slide swiper-slide">
+								<img src="<?php echo $img; ?>" alt="">
+								<div class="kurs__slider_text">
+									<h3><?php echo $title; ?></h3>
+									<p>
+										<?php echo $text; ?>
+									</p>
+								</div>
+							</div>
 
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs1.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 1</h3>
-								<p>Свойства света и цвета. Рассмотрим цветовой круг Йоханнеса Итенна. Узнаем, что такое теплые и холодные цвета и сделаем цветовую карту вашего набора цветных карандашей.</p>
-							</div>
+							<?php endwhile; ?>
 						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs2.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 2</h3>
-								<p>Техника штрихования. Попробуем создать тональные переходы, используя различный виды штриховки – нарисуем синий шар, освещенный с одной стороны.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs3.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 3</h3>
-								<p>Основы светотени. Отработаем принципы светотеневого рисунка на примере рисования зелёного яблока.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs4.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 4</h3>
-								<p>Изображение банана. Нарисуем спелый банан и объясним, как показать фактуру внутренней стороны кожуры с помощью электрического ластика.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs5.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 5</h3>
-								<p>Рисование тыквы. Рассмотрим, как меняется светотеневой рисунок по мере изменения формы предмета. </p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs1.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 6</h3>
-								<p>Изображение фактурных камней.  Покажем, как наиболее реалистично передать шероховатую каменную поверхность.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs2.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 7</h3>
-								<p>Прорисовка стеклянного сосуда.  Изучим технику рисования прозрачного стекла красного цвета.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs3.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 8</h3>
-								<p>Зарисовка медного чайника. Научим передавать фактуру металла и реалистично показывать поверхность медного чайника.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs4.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 9</h3>
-								<p>Изображение полудрагоценного камня. Расскажем, как передавать форму граней кристалла и показать его глубину.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs5.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 10</h3>
-								<p>Рисование морской волны. Научимся передавать динамику в рисунке, а также показывать форму волны и её поверхность.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs1.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 11</h3>
-								<p>Научимся рисовать глаз тигра и передавать выразительность взгляда животного. Прорисуем детали рисунка. Отработаем технику рисования шерсти животного.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs2.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 12</h3>
-								<p>Нарисуем глаз человека и расскажем, как карандашами передать выразительность взгляда и показать фактуру кожи. Подберем цвета для передачи оттенков человеческой кожи.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs3.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 13</h3>
-								<p>Рисуем глаз рептилии – часть 1. Изучим альтернативные методы переноса изображения на поверхность бумаги. Проложим основные тональные пятна.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs4.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 14</h3>
-								<p>Рисуем глаз рептилии – часть 2. Проработаем детали и прорисуем чешую. Попробуем передать выразительность взгляда рептилии.</p>
-							</div>
-						</div>
-
+						<div class="swiper-pagination kurs__prev"></div>
 					</div>
+				<?php endif; ?>
 
-					<div class="swiper-pagination kurs__prev"></div>
-
-				</div>
 			</div>
 		</section>
 
@@ -534,16 +407,17 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
 						
 						<form action="sendmail.php" class="form record__form" method="post">
+							<input type="hidden" name="subject" value="Запишитесь на 1 часть «Основы графики»">
 
 							<h3>Запишитесь на 1 часть «Основы графики»</h3>
 
 							<div class="checkbox">
-								<input type="radio" id="price2" name="price" required>
+								<input type="radio" id="price2" name="price" value="Участие без проверки">
 								<label for="price2"><span>Участие без проверки </span><s>4 500</s>3 000 рублей</label>
 							</div>
 
 							<div class="checkbox">
-								<input type="radio" id="small2" name="price" required>
+								<input type="radio" id="small2" name="price" value="Участие с проверкой">
 								<label for="small2"><span>Участие с проверкой </span><s>9 000 </s>6 000 рублей</label>
 							</div>
 
@@ -592,119 +466,32 @@
 			<div class="kurs__container container">
 				<h2>Содержание уроков 2 часть</h2>
 				
-				<div class="swiper-container kurs__slider">
-					<div class="swiper-wrapper">
+				
+				<?php if( have_rows('lesson2') ): ?>
+					<div class="swiper-container kurs__slider">
+						<div class="swiper-wrapper">
+							<?php while( have_rows('lesson2') ): the_row(); 
+								$img = get_sub_field('img');
+								$title = get_sub_field('title');
+								$text = get_sub_field('text');
+							?>
+							
+							<div class="kurs__slider_slide swiper-slide">
+								<img src="<?php echo $img; ?>" alt="">
+								<div class="kurs__slider_text">
+									<h3><?php echo $title; ?></h3>
+									<p>
+										<?php echo $text; ?>
+									</p>
+								</div>
+							</div>
 
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs1.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 1</h3>
-								<p>Свойства света и цвета. Рассмотрим цветовой круг Йоханнеса Итенна. Узнаем, что такое теплые и холодные цвета и сделаем цветовую карту вашего набора цветных карандашей.</p>
-							</div>
+							<?php endwhile; ?>
 						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs2.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 2</h3>
-								<p>Техника штрихования. Попробуем создать тональные переходы, используя различный виды штриховки – нарисуем синий шар, освещенный с одной стороны.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs3.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 3</h3>
-								<p>Основы светотени. Отработаем принципы светотеневого рисунка на примере рисования зелёного яблока.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs4.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 4</h3>
-								<p>Изображение банана. Нарисуем спелый банан и объясним, как показать фактуру внутренней стороны кожуры с помощью электрического ластика.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs5.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 5</h3>
-								<p>Рисование тыквы. Рассмотрим, как меняется светотеневой рисунок по мере изменения формы предмета. </p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs1.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 6</h3>
-								<p>Изображение фактурных камней.  Покажем, как наиболее реалистично передать шероховатую каменную поверхность.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs2.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 7</h3>
-								<p>Прорисовка стеклянного сосуда.  Изучим технику рисования прозрачного стекла красного цвета.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs3.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 8</h3>
-								<p>Зарисовка медного чайника. Научим передавать фактуру металла и реалистично показывать поверхность медного чайника.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs4.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 9</h3>
-								<p>Изображение полудрагоценного камня. Расскажем, как передавать форму граней кристалла и показать его глубину.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs5.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 10</h3>
-								<p>Рисование морской волны. Научимся передавать динамику в рисунке, а также показывать форму волны и её поверхность.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs1.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 11</h3>
-								<p>Научимся рисовать глаз тигра и передавать выразительность взгляда животного. Прорисуем детали рисунка. Отработаем технику рисования шерсти животного.</p>
-							</div>
-						</div>
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs2.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 12</h3>
-								<p>Нарисуем глаз человека и расскажем, как карандашами передать выразительность взгляда и показать фактуру кожи. Подберем цвета для передачи оттенков человеческой кожи.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs3.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 13</h3>
-								<p>Рисуем глаз рептилии – часть 1. Изучим альтернативные методы переноса изображения на поверхность бумаги. Проложим основные тональные пятна.</p>
-							</div>
-						</div>
-
-						<div class="kurs__slider_slide swiper-slide">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kurs4.png" alt="">
-							<div class="kurs__slider_text">
-								<h3>Урок 14</h3>
-								<p>Рисуем глаз рептилии – часть 2. Проработаем детали и прорисуем чешую. Попробуем передать выразительность взгляда рептилии.</p>
-							</div>
-						</div>
-
+						<div class="swiper-pagination kurs__prev"></div>
 					</div>
+				<?php endif; ?>
 
-					<div class="swiper-pagination kurs__prev"></div>
-
-				</div>
 			</div>
 		</section>
 
@@ -751,16 +538,17 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
 						
 						<form action="sendmail.php" class="form record__form" method="post">
+							<input type="hidden" name="subject" value="Запишитесь на 2 часть «Живая природа»">
 
 							<h3>Запишитесь на 2 часть «Живая природа»</h3>
 
 							<div class="checkbox">
-								<input type="radio" id="price1" name="price" required>
+								<input type="radio" id="price1" name="price1" value="Участие без проверки">
 								<label for="price1"><span>Участие без проверки <br></span><s>4 500</s>3 000 рублей</label>
 							</div>
 
 							<div class="checkbox">
-								<input type="radio" id="small" name="price" required>
+								<input type="radio" id="small" name="price1" value="Участие с проверкой">
 								<label for="small"><span>Участие с проверкой <br></span><s>9 000 </s>6 000 рублей</label>
 							</div>
 
@@ -984,16 +772,17 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
 						
 						<form action="sendmail.php" class="form record__form" method="post">
+							<input type="hidden" name="subject" value="Запишись на полный курс «Основы графики» + «Живая природа»">
 
 							<h3>Запишись на полный курс <br> <span>«Основы графики» + «Живая природа»</span></h3>
 
 							<div class="checkbox">
-								<input type="radio" id="sec_price" name="second">
+								<input type="radio" id="sec_price" name="second" value="Участие без проверки">
 								<label for="sec_price"><span>Участие без проверки</span><s>7 500</s>5 000 рублей</label>
 							</div>
 
 							<div class="checkbox">
-								<input type="radio" id="sec_small" name="second">
+								<input type="radio" id="sec_small" name="second" value="Участие с проверкой">
 								<label for="sec_small"><span>Участие с проверкой</span><s>9 000</s>10 000 рублей</label>
 							</div>
 
@@ -1172,54 +961,26 @@
 			<div class="container">
 
 				<h2>работы преподавателя</h2>
-				
-				<div class="swiper-container teacher__slider">
-					<div class="swiper-wrapper">
 
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher1.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher1.png" alt=""></a>
+				<?php if( have_rows('teacher') ): ?>
+					<div class="swiper-container teacher__slider">
+						<div class="swiper-wrapper">
+							<?php while( have_rows('teacher') ): the_row(); 
+								$img = get_sub_field('img');
+							?>
+							
+							<div class="swiper-slide">
+								<a href="<?php echo $img; ?>" data-fancybox="gallery2">
+									<img src="<?php echo $img; ?>" alt="">
+								</a>
+							</div>
+
+							<?php endwhile; ?>
 						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher2.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher2.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher3.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher3.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher4.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher4.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher5.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher5.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher1.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher1.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher2.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher2.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher3.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher3.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher4.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher4.png" alt=""></a>
-						</div>
-
-						<div class="swiper-slide">
-							<a href="<?php echo get_template_directory_uri(); ?>/assets/img/teacher5.png" data-fancybox="gallery2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher5.png" alt=""></a>
-						</div>
-
+						<div class="swiper-pagination teacher__prev"></div>
 					</div>
+				<?php endif; ?>
 
-					<div class="swiper-pagination teacher__prev"></div>
-				</div>
 			</div>
 		</section>
 
@@ -1371,21 +1132,24 @@
 					<h2>Остались вопросы? <span>Напишите нам!</span></h2>
 
 					<form action="sendmail.php" class="form question__form" method="post">
+						<input type="hidden" name="subject" value="Остались вопросы? Напишите нам!">
 
-							<input type="hidden" name="subject" value="Узнать подробнее!">
-							<div class="">
-								<input type="text" name="name" placeholder="Ваше имя" required>
-							</div>
-							<div class="">
-								<input type="tel" name="phone" required placeholder="Ваш номер телефона">
-							</div>
+						<input type="hidden" name="subject" value="Узнать подробнее!">
+						<div class="">
+							<input type="text" name="name" placeholder="Ваше имя" required>
+						</div>
+						<div class="">
+							<input type="tel" name="phone" placeholder="Ваш номер телефона" required>
+						</div>
 
-							<textarea name="content" rows="5" placeholder="Ваше сообщение" data-required="true" required="" class="question__form_textarea"></textarea>
+						<div class="">
+							<textarea name="content" rows="5" placeholder="Ваше сообщение" data-required="true" required="" class="question__form_textarea" required></textarea>
+						</div>
 
-							<div class="question__button">
+						<div class="question__button">
 
-								<button type="submit" class="btn question__btn" name="submit">Отправить</button>
-							</div>
+							<button type="submit" class="btn question__btn" name="submit">Отправить</button>
+						</div>
 
 					</form>
 
