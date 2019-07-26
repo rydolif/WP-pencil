@@ -153,7 +153,9 @@
 
 							<?php endwhile; ?>
 						</div>
-						<div class="swiper-pagination works__prev"></div>
+						<div class="works__pagination swiper-pagination"></div>
+						<div class="works__next swiper-button-next"></div>
+						<div class="works__prev swiper-button-prev"></div>
 					</div>
 				<?php endif; ?>
 
@@ -191,8 +193,8 @@
 							<?php endwhile; ?>
 						</div>
 						<div class="swiper-pagination"></div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
+						<div class="reviews__next swiper-button-next"></div>
+						<div class="reviews__prev swiper-button-prev"></div>
 					</div>
 				<?php endif; ?>
 
@@ -357,7 +359,9 @@
 
 							<?php endwhile; ?>
 						</div>
-						<div class="swiper-pagination kurs__prev"></div>
+						<div class="kurs__pagination swiper-pagination"></div>
+						<div class="kurs__next swiper-button-next"></div>
+						<div class="kurs__prev swiper-button-prev"></div>
 					</div>
 				<?php endif; ?>
 
@@ -488,7 +492,9 @@
 
 							<?php endwhile; ?>
 						</div>
-						<div class="swiper-pagination kurs__prev"></div>
+						<div class="kurs__pagination swiper-pagination"></div>
+						<div class="kurs__next swiper-button-next"></div>
+						<div class="kurs__prev swiper-button-prev"></div>
 					</div>
 				<?php endif; ?>
 
@@ -766,80 +772,82 @@
 					</ul>
 				</div>
 
-				<div class="record__block elements__block">
-					<div class="record__right elements__left">
+				<div class="elements__wrap">
+					<div class="record__block elements__block">
+						<div class="record__right elements__left">
 
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
-						
-						<form action="sendmail.php" class="form record__form" method="post">
-							<input type="hidden" name="subject" value="Запишись на полный курс «Основы графики» + «Живая природа»">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
+							
+							<form action="sendmail.php" class="form record__form" method="post">
+								<input type="hidden" name="subject" value="Запишись на полный курс «Основы графики» + «Живая природа»">
 
-							<h3>Запишись на полный курс <br> <span>«Основы графики» + «Живая природа»</span></h3>
+								<h3>Запишись на полный курс <br> <span>«Основы графики» + «Живая природа»</span></h3>
 
-							<div class="checkbox">
-								<input type="radio" id="sec_price" name="second" value="Участие без проверки">
-								<label for="sec_price"><span>Участие без проверки</span><s>7 500</s>5 000 рублей</label>
-							</div>
+								<div class="checkbox">
+									<input type="radio" id="sec_price" name="second" value="Участие без проверки">
+									<label for="sec_price"><span>Участие без проверки</span><s>7 500</s>5 000 рублей</label>
+								</div>
 
-							<div class="checkbox">
-								<input type="radio" id="sec_small" name="second" value="Участие с проверкой">
-								<label for="sec_small"><span>Участие с проверкой</span><s>9 000</s>10 000 рублей</label>
-							</div>
+								<div class="checkbox">
+									<input type="radio" id="sec_small" name="second" value="Участие с проверкой">
+									<label for="sec_small"><span>Участие с проверкой</span><s>9 000</s>10 000 рублей</label>
+								</div>
 
-							<input type="hidden" name="subject" value="Узнать подробнее!">
-							<div class="record__form_in">
-								<input type="text" name="name" placeholder="Введите Ваше имя" required>
-							</div>
-							<div class="">
-								<input type="tel" name="phone" required placeholder="Введите Ваш телефон">
-							</div>
-							<div class="">
-								<input type="email" name="mail" required placeholder="Введите Ваш Email">
-							</div>
-							<div class="record__btn">
-								<button type="submit" class="btn" name="submit">Записаться</button>
-							</div>
+								<input type="hidden" name="subject" value="Узнать подробнее!">
+								<div class="record__form_in">
+									<input type="text" name="name" placeholder="Введите Ваше имя" required>
+								</div>
+								<div class="">
+									<input type="tel" name="phone" required placeholder="Введите Ваш телефон">
+								</div>
+								<div class="">
+									<input type="email" name="mail" required placeholder="Введите Ваш Email">
+								</div>
+								<div class="record__btn">
+									<button type="submit" class="btn" name="submit">Записаться</button>
+								</div>
 
-						</form>
+							</form>
 
-					</div>
-				</div>
-
-				<div class="elements__right">
-
-					<div class="elements__right_first">
-						
-						<h3>Обучаюсь самостоятельно:</h3>
-
-						<ul>
-							<li><span>+</span> 25 уроков по 1,5 - 3 часа;</li>
-							<li><span>+</span> 20 законченных работ + технические задания;</li>
-							<li><span>+</span> 56 часов подробных видеоматериалов;</li>
-							<li><span>+</span> Техподдержка куратора курса;</li>
-							<li><span>+</span> Доступ к программе 24 месяцев;</li>
-							<li><span>+</span> Общий чат.</li>
-						</ul>
-
-					</div>
-					
-					<div class="elements__right_second">
-						
-						<h3>С проверкой и сопровождением:</h3>
-
-						<ul>
-							<li><span>+</span> 25 уроков по 1,5 - 3 часа;</li>
-							<li><span>+</span> 20 законченных работ + технические задания;</li>
-							<li><span>+</span> 56 часов подробных видеоматериалов;</li>
-							<li><span>+</span> Техподдержка куратора курса;</li>
-							<li><span>+</span> Доступ к программе 24 месяцев ;</li>
-							<li><span>+</span> Общий чат;</li>
-							<li><span>+</span> Обратная cвязь с преподавателем - 24 месяцев;</li>
-							<li><span>+</span> Рекомендации педагога по каждой работе;</li>
-							<li><span>+</span> Сертификат о прохождении курса.</li>
-						</ul>
-
+						</div>
 					</div>
 
+					<div class="elements__right">
+
+						<div class="elements__right_first">
+							
+							<h3>Обучаюсь самостоятельно:</h3>
+
+							<ul>
+								<li><span>+</span> 25 уроков по 1,5 - 3 часа;</li>
+								<li><span>+</span> 20 законченных работ + технические задания;</li>
+								<li><span>+</span> 56 часов подробных видеоматериалов;</li>
+								<li><span>+</span> Техподдержка куратора курса;</li>
+								<li><span>+</span> Доступ к программе 24 месяцев;</li>
+								<li><span>+</span> Общий чат.</li>
+							</ul>
+
+						</div>
+						
+						<div class="elements__right_second">
+							
+							<h3>С проверкой и сопровождением:</h3>
+
+							<ul>
+								<li><span>+</span> 25 уроков по 1,5 - 3 часа;</li>
+								<li><span>+</span> 20 законченных работ + технические задания;</li>
+								<li><span>+</span> 56 часов подробных видеоматериалов;</li>
+								<li><span>+</span> Техподдержка куратора курса;</li>
+								<li><span>+</span> Доступ к программе 24 месяцев ;</li>
+								<li><span>+</span> Общий чат;</li>
+								<li><span>+</span> Обратная cвязь с преподавателем - 24 месяцев;</li>
+								<li><span>+</span> Рекомендации педагога по каждой работе;</li>
+								<li><span>+</span> Сертификат о прохождении курса.</li>
+							</ul>
+
+						</div>
+
+					</div>
 				</div>
 
 			</div>
@@ -848,7 +856,7 @@
 		<section class="seven">
 			<div class="container seven__container">
 
-				<h1>7 причин учиться у нас </h1>
+				<h2>7 причин учиться у нас </h2>
 
 				<div>
 					<span>Много практики</span>
@@ -977,7 +985,9 @@
 
 							<?php endwhile; ?>
 						</div>
-						<div class="swiper-pagination teacher__prev"></div>
+						<div class="swiper-pagination teacher__pagination"></div>
+						<div class="teacher__next swiper-button-next"></div>
+						<div class="teacher__prev swiper-button-prev"></div>
 					</div>
 				<?php endif; ?>
 

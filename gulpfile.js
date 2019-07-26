@@ -45,7 +45,7 @@ gulp.task('js', function() {
 		// 'pancile/assets/libs/slick/slick.js', 					//----слайдер
 		 // 'pancile/assets/libs/flipclock/flipclock.js',
 		'pancile/assets/libs/swiper/swiper.min.js', 			//----слайдер
-		// 'pancile/assets/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
+		'pancile/assets/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		// 'pancile/assets/libs/jquery.spincrement.min.js', 		//----цифри анімованні
 		// 'pancile/assets/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
 		'pancile/assets/js/common.js', // Always at the end

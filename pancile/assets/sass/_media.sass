@@ -476,8 +476,13 @@
 			bottom: 30px
 
 		&__right
+			flex-direction: column-reverse
 			justify-content: center
 			align-items: center
+
+		&__wrap
+			display: flex
+			flex-direction: column-reverse
 
 	.seven
 		padding: 20px 0
@@ -792,6 +797,13 @@
 
 
 @media only screen and (max-width : 576px)
+	.teacher__slider .swiper-slide:hover,
+	.teacher__slider .swiper-slide:focus,
+	.works__slider .swiper-slide:hover,
+	.works__slider .swiper-slide:focus,
+	.kurs__slider_slide:hover,
+	.kurs__slider_slide:focus
+		transform: scale(1)
 
 	.about
 
@@ -1129,3 +1141,6 @@
 
 	.swiper-button-next, .swiper-button-prev
 		background-size: 20px 29px
+	
+	.seven div span
+		font-size: 26px

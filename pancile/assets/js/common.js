@@ -72,14 +72,16 @@ $(function() {
 
 //-------------------------slider---------------------------------------
   var swiper = new Swiper('.works__slider', {
-    freeMode: true,
     loop: true,
     slidesPerView: 3,
     spaceBetween: 50,
-    // init: false,
     pagination: {
-      el: '.works__prev',
+      el: '.works__pagination',
       clickable: true,
+    },
+    navigation: {
+      nextEl: '.works__next',
+      prevEl: '.works__prev',
     },
     breakpoints: {
       1200: {
@@ -110,34 +112,9 @@ $(function() {
         clickable: true,
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.reviews__next',
+        prevEl: '.reviews__prev',
       },
-  });
-
-  var swiper = new Swiper('.kurs__slider', {
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 50,
-    // init: false,
-    pagination: {
-      el: '.kurs__prev',
-      clickable: true,
-    },
-    breakpoints: {
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      767: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      }
-    }
   });
 
   var swiper = new Swiper('.teacher__slider', {
@@ -146,8 +123,12 @@ $(function() {
     spaceBetween: 50,
     // init: false,
     pagination: {
-      el: '.teacher__prev',
+      el: '.teacher__pagination',
       clickable: true,
+    },
+    navigation: {
+      nextEl: '.teacher__next',
+      prevEl: '.teacher__prev',
     },
     breakpoints: {
       768: {

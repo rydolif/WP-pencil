@@ -58,8 +58,12 @@
 	    spaceBetween: 50,
 	    // init: false,
 	    pagination: {
-	      el: '.kurs__prev',
+	      el: '.kurs__pagination',
 	      clickable: true,
+	    },
+	    navigation: {
+	      nextEl: '.kurs__next',
+	      prevEl: '.kurs__prev',
 	    },
 	    breakpoints: {
 	      992: {
