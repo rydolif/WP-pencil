@@ -53,7 +53,7 @@
 
 					<div class="about__item">
 						<span>25 уроков</span>
-						<p>Продолжительность уроков 1,5 - 3 часа. Вас ждет большое количество теори и практики.</p>
+						<p>Продолжительность уроков 1,5 - 3 часа. Вас ждет большое количество теории и практики.</p>
 					</div>
 
 					<div class="about__item">
@@ -273,7 +273,7 @@
 							
 							<li>
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
-								<p>Глубина в работе и тональный контарст;</p>
+								<p>Глубина в работе и тональный контраст;</p>
 							</li>
 							
 							<li>
@@ -417,12 +417,12 @@
 
 							<div class="checkbox">
 								<input type="radio" id="price2" name="price" value="Участие без проверки">
-								<label for="price2"><span>Участие без проверки </span><s>4 500</s>3 000 рублей</label>
+								<label for="price2"><span>Участие без проверки </span><s><?php the_field('price2--false'); ?></s><?php the_field('price2--true'); ?></label>
 							</div>
 
 							<div class="checkbox">
 								<input type="radio" id="small2" name="price" value="Участие с проверкой">
-								<label for="small2"><span>Участие с проверкой </span><s>9 000 </s>6 000 рублей</label>
+								<label for="small2"><span>Участие с проверкой </span><s><?php the_field('small2--false'); ?> </s><?php the_field('small2--true'); ?></label>
 							</div>
 
 							<input type="hidden" name="subject" value="Узнать подробнее!">
@@ -550,12 +550,12 @@
 
 							<div class="checkbox">
 								<input type="radio" id="price1" name="price1" value="Участие без проверки">
-								<label for="price1"><span>Участие без проверки <br></span><s>4 500</s>3 000 рублей</label>
+								<label for="price1"><span>Участие без проверки <br></span><s><?php the_field('price1--false'); ?></s><?php the_field('price1--true'); ?></label>
 							</div>
 
 							<div class="checkbox">
 								<input type="radio" id="small" name="price1" value="Участие с проверкой">
-								<label for="small"><span>Участие с проверкой <br></span><s>9 000 </s>6 000 рублей</label>
+								<label for="small"><span>Участие с проверкой <br></span><s><?php the_field('small--false'); ?> </s><?php the_field('small--true'); ?></label>
 							</div>
 
 							<input type="hidden" name="subject" value="Узнать подробнее!">
@@ -785,12 +785,12 @@
 
 								<div class="checkbox">
 									<input type="radio" id="sec_price" name="second" value="Участие без проверки">
-									<label for="sec_price"><span>Участие без проверки</span><s>7 500</s>5 000 рублей</label>
+									<label for="sec_price"><span>Участие без проверки</span><s><?php the_field('sec_price--false'); ?></s><?php the_field('sec_price--true'); ?></label>
 								</div>
 
 								<div class="checkbox">
 									<input type="radio" id="sec_small" name="second" value="Участие с проверкой">
-									<label for="sec_small"><span>Участие с проверкой</span><s>9 000</s>10 000 рублей</label>
+									<label for="sec_small"><span>Участие с проверкой</span><s><?php the_field('sec_small--false'); ?></s><?php the_field('sec_small--true'); ?></label>
 								</div>
 
 								<input type="hidden" name="subject" value="Узнать подробнее!">
