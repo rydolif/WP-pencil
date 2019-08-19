@@ -633,6 +633,7 @@
 
 	&__container
 		display: flex
+		justify-content: space-between
 
 	h3
 		color: #27efff
@@ -650,17 +651,16 @@
 
 	&__block
 		position: relative
-		width: 60%
+		width: 57%
 
 	&__right
 		position: absolute
 		bottom: -120px
 		right: -20px
-		
 		img
 			position: absolute
 			width: 100%
-			height: 105%
+			height: 100%
 			z-index: 1
 
 	&__form
@@ -674,7 +674,7 @@
 			font-size: 50px
 			font-family: $asc
 			font-weight: 700
-			padding-bottom: 40px
+			margin-bottom: 100px
 			text-align: center
 
 		input
@@ -696,7 +696,7 @@
 
 		.checkbox
 			display: flex
-			margin-bottom: 0
+			margin-bottom: 100px
 
 			span
 				font-size: 24px
@@ -716,7 +716,7 @@
 			cursor: pointer
 			margin-bottom: 0
 			margin-right: 0
-			font-size: 48px
+			font-size: 40px
 			color: #da1502
 
 			&::before,
@@ -724,7 +724,7 @@
 				content: ''
 				position: absolute
 				left: -5px
-				top: 36px
+				top: 28px
 
 			&::before
 				width: 15px
@@ -739,7 +739,7 @@
 				border: 1px solid #0fcda6
 				background-color: #0fcda6
 				left: -2px
-				top: 39px
+				top: 31px
 				transition: all .6s
 
 		input[type="radio"]
@@ -753,7 +753,6 @@
 
 	&__btn
 		text-align: center
-		margin-top: 55px
 
 		.btn
 			background-color: #1dd3bd
@@ -1407,6 +1406,13 @@
 
 		img
 			margin-right: 10px
+
+
+.disabled
+	cursor: not-allowed
+	pointer-events: none
+	background-color: #b5b5b5 !important
+
 
 
 @import "page"

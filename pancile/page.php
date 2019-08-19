@@ -410,10 +410,10 @@
 
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
 						
-						<form action="sendmail.php" class="form record__form" method="post">
+						<div class="form record__form">
 							<input type="hidden" name="subject" value="Запишитесь на 1 часть «Основы графики»">
 
-							<h3>Запишитесь на 1 часть «Основы графики»</h3>
+							<h3>Запишитесь на 1 часть<br>«Основы графики»</h3>
 
 							<div class="checkbox">
 								<input type="radio" id="price2" name="price" value="Участие без проверки">
@@ -425,21 +425,11 @@
 								<label for="small2"><span>Участие с проверкой </span><s><?php the_field('small2--false'); ?> </s><?php the_field('small2--true'); ?></label>
 							</div>
 
-							<input type="hidden" name="subject" value="Узнать подробнее!">
-							<div class="record__form_in">
-								<input type="text" name="name" placeholder="Введите Ваше имя" required>
-							</div>
-							<div class="">
-								<input type="tel" name="phone" required placeholder="Введите Ваш телефон">
-							</div>
-							<div class="">
-								<input type="email" name="mail" required placeholder="Введите Ваш Email">
-							</div>
 							<div class="record__btn">
-								<button type="submit" class="btn" name="submit">Записаться</button>
+								<button type="submit" id="btn1" class="btn disabled" name="submit">Записаться</button>
 							</div>
 
-						</form>
+						</div>
 
 					</div>
 				</div>
@@ -544,9 +534,9 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
 						
 						<form action="sendmail.php" class="form record__form" method="post">
-							<input type="hidden" name="subject" value="Запишитесь на 2 части «Живая природа»">
+							<input type="hidden" name="subject" value="Запишитесь на 2 часть «Живая природа»">
 
-							<h3>Запишитесь на 2 части «Живая природа»</h3>
+							<h3>Запишитесь на 2 часть <br>«Живая природа»</h3>
 
 							<div class="checkbox">
 								<input type="radio" id="price1" name="price1" value="Участие без проверки">
@@ -558,18 +548,8 @@
 								<label for="small"><span>Участие с проверкой <br></span><s><?php the_field('small--false'); ?> </s><?php the_field('small--true'); ?></label>
 							</div>
 
-							<input type="hidden" name="subject" value="Узнать подробнее!">
-							<div class="record__form_in">
-								<input type="text" name="name" placeholder="Введите Ваше имя" required>
-							</div>
-							<div class="">
-								<input type="tel" name="phone" required placeholder="Введите Ваш телефон">
-							</div>
-							<div class="">
-								<input type="email" name="mail" required placeholder="Введите Ваш Email">
-							</div>
 							<div class="record__btn">
-								<button type="submit" class="btn" name="submit">Записаться</button>
+								<button type="submit" class="btn disabled" id="btn2" name="submit">Записаться</button>
 							</div>
 
 						</form>
@@ -793,18 +773,8 @@
 									<label for="sec_small"><span>Участие с проверкой</span><s><?php the_field('sec_small--false'); ?></s><?php the_field('sec_small--true'); ?></label>
 								</div>
 
-								<input type="hidden" name="subject" value="Узнать подробнее!">
-								<div class="record__form_in">
-									<input type="text" name="name" placeholder="Введите Ваше имя" required>
-								</div>
-								<div class="">
-									<input type="tel" name="phone" required placeholder="Введите Ваш телефон">
-								</div>
-								<div class="">
-									<input type="email" name="mail" required placeholder="Введите Ваш Email">
-								</div>
 								<div class="record__btn">
-									<button type="submit" class="btn" name="submit">Записаться</button>
+									<button type="submit" class="btn disabled" id="btn3" name="submit">Записаться</button>
 								</div>
 
 							</form>

@@ -1,5 +1,49 @@
 $(function() {
 
+    $("#price2").change(function () {
+      if ($("#price2").is(":checked")) {
+        $('#btn1').addClass('first-part_open');
+        $('#btn1').removeClass('first-part--check_open');
+        $('#btn1').removeClass('disabled');
+      }
+    });        
+    $("#small2").change(function () {
+      if ($("#small2").is(":checked")) {
+        $('#btn1').addClass('first-part--check_open');
+        $('#btn1').removeClass('first-part_open');
+        $('#btn1').removeClass('disabled');
+      }
+    });        
+
+    $("#price1").change(function () {
+      if ($("#price1").is(":checked")) {
+        $('#btn2').addClass('two-part_open');
+        $('#btn2').removeClass('two-part--check_open');
+        $('#btn2').removeClass('disabled');
+      }
+    });        
+    $("#small").change(function () {
+      if ($("#small").is(":checked")) {
+        $('#btn2').addClass('two-part--check_open');
+        $('#btn2').removeClass('two-part_open');
+        $('#btn2').removeClass('disabled');
+      }
+    });
+
+    $("#sec_price").change(function () {
+      if ($("#sec_price").is(":checked")) {
+        $('#btn3').addClass('three-part_open');
+        $('#btn3').removeClass('three-part--check_open');
+        $('#btn3').removeClass('disabled');
+      }
+    });        
+    $("#sec_small").change(function () {
+      if ($("#sec_small").is(":checked")) {
+        $('#btn3').addClass('three-part--check_open');
+        $('#btn3').removeClass('three-part_open');
+        $('#btn3').removeClass('disabled');
+      }
+    });        
 
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
