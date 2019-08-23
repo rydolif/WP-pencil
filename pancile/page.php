@@ -21,10 +21,17 @@
 
 					<h1><?php the_field('title'); ?></h1>
 
-					<ul>
-						<li><span>+</span>Старт занятий 01.08.2019</li>
-						<li><span>+</span>Доступ к урокам с любой точки мира</li>
-					</ul>
+					<?php if( have_rows('title--list') ): ?>
+						<ul>
+						<?php while( have_rows('title--list') ): the_row(); 
+							$text = get_sub_field('text');
+							?>
+
+							<li><span>+</span><?php echo $text; ?></li>
+
+						<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>
 						
 					<div class="click">
 						<a href="#tabs" class="btn hero__btn">Программа курса</a>
