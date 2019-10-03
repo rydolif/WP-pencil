@@ -1,6 +1,17 @@
 @import "libs"
 @import "base"
 
+.absolute
+	height: 50px
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 1000
+
+.fixed
+	position: fixed
+
 .main
 	overflow: hidden
 
@@ -1041,7 +1052,7 @@
 	background-image: url(../img/reviews_bg.jpg)
 	background-size: cover
 	background-position: 0% 0%
-	padding: 100px 0 145px
+	padding: 100px 0 100px
 
 	h2
 		color: #2965b0
@@ -1414,6 +1425,8 @@
 	cursor: not-allowed
 	pointer-events: none
 	background-color: #b5b5b5 !important
+
+
 
 
 

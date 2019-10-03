@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 
 	<main class="main">
@@ -10,7 +9,12 @@
 
 					<div class="hero__logo click">
 						<a href="#about" class="click">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo">
+							<img
+                                    src="data:image/gif;base64,R0lGODlhCgAUAIAAAP///wAAACH5BAEAAAEALAAAAAAKABQAAAIMjI+py+0Po5y02usKADs="
+                                    alt="logo"
+                                    class="lazy"
+                                    data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png 1x"
+                            >
 							<div class="hero__logo_text">
 								<p>prokarandash</p>
 								<span>Онлайн школа рисунка</span>
@@ -52,8 +56,18 @@
 				</div>
 
 				<div class="about__oli">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/3.png" alt="img">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/strujka.png" alt="">
+					<img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/3.png"
+                            alt="photo"
+                            class="lazy"
+                    >
+					<img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/strujka.png"
+                            alt="photo"
+                            class="lazy"
+                    >
 				</div>
 
 				<div class="about__list">
@@ -80,10 +94,24 @@
 
 				</div>
 
-				<div class="about__adp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo.png" alt="photo"></div>
+				<div class="about__adp">
+                    <img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/photo.png"
+                            alt="photo"
+                            class="lazy"
+                    >
+                </div>
 
 				<div class="about__text">
-					<div class="about__photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo.png" alt="photo"></div>
+					<div class="about__photo">
+                        <img
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/photo.png"
+                                alt="photo"
+                                class="lazy"
+                        >
+                    </div>
 					<div>
 						<p>
 							Вы когда-либо рисовали цветными карандашами? Такой, казалось бы, простой инструмент открывает широкие возможности для творчества и обучению рисунку.
@@ -111,12 +139,24 @@
 
 				<h2>Кому подходит программа?</h2>
 
-				<div class="program__photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/prog_img.png" alt=""></div>
+				<div class="program__photo">
+                    <img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/prog_img.png"
+                            alt="photo"
+                            class="lazy"
+                    >
+                </div>
 
 				<div class="program__list">
 
 					<div class="program__item">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/program1.png" alt="">
+						<img
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/program1.png"
+                                alt="photo"
+                                class="lazy"
+                        >
 						<span>Новички</span>
 						<p>
 							Этот курс подойдёт тем, кто только начинает свой творческий путь.
@@ -128,7 +168,12 @@
 					</div>
 
 					<div class="program__item">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/program2.png" alt="">
+						<img
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/program2.png"
+                                alt="photo"
+                                class="lazy"
+                        >
 						<span>Опытные художники</span>
 						<p>
 							Курс будет интересен тем, кто хочет совершенствовать технику и освоить новые приёмы рисования цветными карандашами. Вы сможете рисовать животных и птиц, добиваясь в работе максимальной выразительности и яркости цвета. Эти знания могут стать отличным источником дополнительного дохода. Вы сможете рисовать на заказ портреты домашних любимцев, а также разрабатывать индивидуальные эскизы для тату.
@@ -154,7 +199,12 @@
 
 								<div class="swiper-slide">
 									<a href="<?php echo $url; ?>" data-fancybox="gallery">
-										<img src="<?php echo $url; ?>" alt="">
+										<img
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="<?php echo $url; ?>"
+                                                alt="photo"
+                                                class="lazy"
+                                        >
 									</a>
 								</div>
 
@@ -192,7 +242,12 @@
 										</p>
 										<div class="reviews__slide_info">
 											<p><?php echo $name; ?> <time datetime="2018-07-24"><?php echo $date; ?></time></p>
-											<img src="<?php echo $img; ?>" alt="">
+											<img
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                    data-srcset="<?php echo $img; ?>"
+                                                    alt="photo"
+                                                    class="lazy"
+                                            >
 										</div>
 									</div>
 								</div>
@@ -232,84 +287,164 @@
 				</div>
 				
 				<div class="learn__tems">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/tems1.png" alt="" class="learn__tems_bg">
+					<img
+                            src="data:image/gif;base64,R0lGODlhZAXHBIAAAP///wAAACH5BAEAAAEALAAAAABkBccEAAL+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8b+jRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO34MObLkyZQrW76MObPmzZw7e/4MOrTo0aRLmz6NOrXq1axbu34NO7bs2bRr276NO7fu3bx7+/4NPLjw4cSLGz+OPLny5cybO38OPbr06dSrW7+OPbv27dy7e/8OPrz48eTLmz+PPr369ezbu38PP778+fTr27+PP7/+/fz++/v/D2CAAg5IYIEGHohgggouyGCDDj4IYYQSTkhhhRZeiGGGGm7IYYcefghiiCKOSGKJJp6IYooqrshiiy6+CGOMMs5IY4023ohjjjruyGOPPv4IZJBCDklkkUYeiWSSSi7JZJNOPglllFJOSWWVVl6JZZZabslll15+CWaYYo5JZplmnolmmmquyWabbr4JZ5xyzklnnXbeiWeeeu7JZ59+/glooIIOSmihhh6KaKKKLspoo44+Cmmkkk5KaaWWXopppppuymmnnn4Kaqiijkpqqaaeimqqqq7KaquuvgprrLLOSmuttt6Ka6667sprr77+Cmywwg5LbLHGHov+bLLKLstss84+C2200k5LbbXWXottttpuy2233n4Lbrjijktuueaei2666q7LbrvuvgtvvPLOS2+99t6Lb7767stvv/7+C3DAAg9McMEGH4xwwgovzHDDDj8MccQST0xxxRZfjHHGGm/McccefwxyyCKPTHLJJp+Mcsoqr8xyyy6/DHPMMs9Mc80234xzzjrvzHPPPv8MdNBCD0100UYfjXTSSi/NdNNOPw111FJPTXXVVl+NddZab811115/DXbYYo9Ndtlmn4122mqvzXbbbr8Nd9xyz0133XbfjXfeeu/Nd99+/w144IIPTnjhhh+OeOKKL854444/Dnnkkk/+Tnnlll+Oeeaab855555/Dnrooo9Oeummn4566qqvznrrrr8Oe+yyz0577bbfjnvuuu/Oe+++/w588MIPT3zxxh+PfPLKL898884/D3300k9PffXWX4999tpvz3333n8Pfvjij09++eafj3766q/Pfvvuvw9//PLPT3/99t+Pf/76789///7/D8AACnCABCygAQ+IwAQqcIEMbKADHwjBCEpwghSsoAUviMEManCDHOygBz8IwhCKcIQkLKEJT4jCFKpwhSxsoQtfCMMYynCGNKyhDW+IwxzqcIc87KEPfwjEIApxiEQsohGPiMQkKnGJTGyiE58IxShKcYpUrKL+Fa+IxSxqcYtc7KIXvwjGMIpxjGQsoxnPiMY0qnGNbGyjG98IxzjKcY50rKMd74jHPOpxj3zsox//CMhACnKQhCykIQ+JyEQqcpGMbKQjHwnJSEpykpSspCUviclManKTnOykJz8JylCKcpSkLKUpT4nKVKpylaxspStfCctYynKWtKylLW+Jy1zqcpe87KUvfwnMYApzmMQspjGPicxkKnOZzGymM58JzWhKc5rUrKY1r4nNbGpzm9zspje/Cc5winOc5CynOc+JznSqc53sbKc73wnPeMpznvSspz3vic986nOf/OynP/8J0IAKdKAELahBD4rQhCp0oQxtqEP+HwrRiEp0ohStqEUvitGManSjHO2oRz8K0pCKdKQkLalJT4rSlKp0pSxtqUtfCtOYynSmNK2pTW+K05zqdKc87alPfwrUoAp1qEQtqlGPitSkKnWpTG2qU58K1ahKdapUrapVr4rVrGp1q1ztqle/CtawinWsZC2rWc+K1rSqda1sbatb3wrXuMp1rnStq13vite86nWvfO2rX/8K2MAKdrCELaxhD4vYxCp2sYxtrGMfC9nISnaylK2sZS+L2cxqdrOc7axnPwva0Ip2tKQtrWlPi9rUqna1rG2ta18L29jKdra0ra1tb4vb3Op2t7ztrW9/C9zgCne4xC2ucY/+i9zkKne5zG2uc58L3ehKd7rUra51r4vd7Gp3u9ztrne/C97wine85C2vec+L3vSqd73sba973wvf+Mp3vvStr33vi9/86ne//O2vf/8L4AALeMAELrCBD4zgBCt4wQxusIMfDOEIS3jCFK6whS+M4QxreMMc7rCHPwziEIt4xCQusYlPjOIUq3jFLG6xi18M4xjLeMY0rrGNb4zjHOt4xzzusY9/DOQgC3nIRC6ykY+M5CQreclMbrKTnwzlKEt5ylSuspWvjOUsa3nLXO6yl78M5jCLecxkLrOZz4zmNKt5zWxus5vfDOc4y3nOdK6zne+M5zzrec987rOf/wz26EALetCELrShD43oRCt60YxutKMfDelIS3rSlK60pS+N6UxretOc7rSnPw3qUIt61KQutalPjepUq3rVrG61q18N61jLeta0rrWtb43rXOt617zuta9/DexgC3vYxC62sY+N7GQre9nMbraznw3taEt72tSutrWvje1sa3vb3O62t78N7nCLe9zkLre5z43udKt73exut7vfDe94y3ve9K63ve+N73zre9/87re//w3wgAt84AQvuMEPjvCEK3zhDG+4wx8O8YhLfOIUr7jFL47xjGt84xzvuMc/DvKQi3zkJC+5yU+O8pSrfOUsb7nLXw5zsRYAADs="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/tems1.png"
+                            alt="photo"
+                            class="lazy learn__tems_bg"
+                    >
 					
 					<div class="learn__list">
 						<h2>Темы, которые мы разберём</h2>
 						<ul>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+								<img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Материалы и инструменты необходимые в работе;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Выбор цветных карандашей, разбор марок и фирм;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Техника штриха и плотный закрас;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Бумага для графики. Kак ее цвет и фактура влияет на результат;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Цветоведение – свет и цвет в рисунке;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Цветовой круг Итенна;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Теплые. холодные цвета и цветовые комбинации;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Воздушная и линейная перспектива;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Глубина в работе и тональный контраст;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Создание текстур. Особенности и техники;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Передача материала и поверхностей предметов;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Изображение и портреты животных и птиц;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Рисование различных видов шерсти;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Секрет рисования выразительного взгляда;</p>
 							</li>
 							
 							<li>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png" alt="mark">
+                                <img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/mark.png"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<p>Правильная расстановка акцентов.</p>
 							</li>
 
@@ -355,7 +490,12 @@
 							?>
 							
 							<div class="kurs__slider_slide swiper-slide">
-								<img src="<?php echo $img; ?>" alt="">
+								<img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo $img; ?>"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<div class="kurs__slider_text">
 									<h3><?php echo $title; ?></h3>
 									<p>
@@ -415,7 +555,12 @@
 				<div class="record__block">
 					<div class="record__right">
 
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
+						<img
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png"
+                                alt="photo"
+                                class="lazy"
+                        >
 						
 						<div class="form record__form">
 							<input type="hidden" name="subject" value="Запишитесь на 1 часть «Основы графики»">
@@ -478,7 +623,12 @@
 							?>
 							
 							<div class="kurs__slider_slide swiper-slide">
-								<img src="<?php echo $img; ?>" alt="">
+								<img
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-srcset="<?php echo $img; ?>"
+                                        alt="photo"
+                                        class="lazy"
+                                >
 								<div class="kurs__slider_text">
 									<h3><?php echo $title; ?></h3>
 									<p>
@@ -538,7 +688,12 @@
 				<div class="record__block">
 					<div class="record__right">
 
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
+						<img
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png"
+                                alt="photo"
+                                class="lazy"
+                        >
 						
 						<form action="sendmail.php" class="form record__form" method="post">
 							<input type="hidden" name="subject" value="Запишитесь на 2 часть «Живая природа»">
@@ -568,12 +723,20 @@
 
 		<section class="how">
 
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/how_left.png" alt="" class="how__left">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/how_right.png" alt="" class="how__right">
+			<img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/how_left.png"
+                    alt="img"
+                    class="lazy how__left"
+            >
+			<img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/how_right.png"
+                    alt="img"
+                    class="lazy how__right"
+            >
 
 			<div class="container how__container">
-
-				
 
 				<h3>Как проходит обучение?</h3>
 
@@ -737,7 +900,14 @@
 			<div class="container complekt__container">
 				<h2>Комплект курсов по выгодной цене</h2>
 				<p>Приобретайте 2 курса и получите дополнительную скидку в 20%</p>
-				<div class="complekt__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/complect.png" alt=""></div>
+				<div class="complekt__img">
+                    <img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/complect.png"
+                            alt="img"
+                            class="lazy"
+                    >
+                </div>
 			</div>
 		</section>
 
@@ -763,7 +933,12 @@
 					<div class="record__block elements__block">
 						<div class="record__right elements__left">
 
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png" alt="">
+							<img
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                    data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/form_bg.png"
+                                    alt="img"
+                                    class="lazy"
+                            >
 							
 							<form action="sendmail.php" class="form record__form" method="post">
 								<input type="hidden" name="subject" value="Запишись на полный курс «Основы графики» + «Живая природа»">
@@ -885,7 +1060,12 @@
 					</p>
 				</div>
 
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/author1.png" alt="" class="seven__str">
+				<img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                        data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/author1.png"
+                        alt="img"
+                        class="lazy seven__str"
+                >
 
 			</div>
 		</section>
@@ -894,7 +1074,12 @@
 			<div class="container author__container">
 
 				<div class="author__cover">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/author.png" alt="">
+					<img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/author.png"
+                            alt="img"
+                            class="lazy"
+                    >
 				</div>
 
 				<div class="author__text">
@@ -956,7 +1141,12 @@
 							
 							<div class="swiper-slide">
 								<a href="<?php echo $img; ?>" data-fancybox="gallery2">
-									<img src="<?php echo $img; ?>" alt="">
+									<img
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                            data-srcset="<?php echo $img; ?>"
+                                            alt="img"
+                                            class="lazy"
+                                    >
 								</a>
 							</div>
 
@@ -968,6 +1158,9 @@
 					</div>
 				<?php endif; ?>
 
+
+				<a href="#" class="btn btn--demo hero__btn demo_open">Получить демо-доступ к курсу</a>
+
 			</div>
 		</section>
 
@@ -975,7 +1168,12 @@
 			<div class="container inst__container">
 
 				<div class="inst__top">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/ins_top.png" alt="">
+					<img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/ins_top.png"
+                            alt="img"
+                            class="lazy"
+                    >
 				</div>
 
 				<div class="inst__title">
@@ -1103,15 +1301,31 @@
 		</section>
 
 		<section class="question">
+            <div class="absolute"></div>
 			<div class="container question__container">
 
 				<div class="question__img">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/question.png" alt="">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/question_b.png" alt="">
+					<img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/question.png"
+                            alt="img"
+                            class="lazy"
+                    >
+					<img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/question_b.png"
+                            alt="img"
+                            class="lazy"
+                    >
 				</div>
 
 				<div class="question__bot">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/ins_bottom.png" alt="">
+					<img
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/ins_bottom.png"
+                            alt="img"
+                            class="lazy"
+                    >
 				</div>
 
 				<div>

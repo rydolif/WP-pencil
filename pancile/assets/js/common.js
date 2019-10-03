@@ -1,4 +1,8 @@
 $(function() {
+  //------------------------------счетчики----------------------
+    $('.absolute').mouseleave(function(){
+      $("#demo").popup("show");
+    });
 
     $("#price2").change(function () {
       if ($("#price2").is(":checked")) {
@@ -116,7 +120,6 @@ $(function() {
 
 //-------------------------slider---------------------------------------
   var swiper = new Swiper('.works__slider', {
-    loop: true,
     slidesPerView: 3,
     spaceBetween: 50,
     pagination: {
@@ -162,10 +165,8 @@ $(function() {
   });
 
   var swiper = new Swiper('.teacher__slider', {
-    loop: true,
     slidesPerView: 3,
     spaceBetween: 50,
-    // init: false,
     pagination: {
       el: '.teacher__pagination',
       clickable: true,
@@ -227,4 +228,3 @@ $(function() {
   });
   
 });
-

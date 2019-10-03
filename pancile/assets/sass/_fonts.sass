@@ -1,11 +1,16 @@
-@import "_base/font-face"
 
-+font-face("Neucha", "../webfonts/Neucha/Neucha", 400)
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+  @font-face
+    font-family: $f-name
+    font-style: $f-style
+    font-weight: $f-weight
+    src: url($f-url) format('woff2')
+    font-display: swap
 
-+font-face("AmaticSC", "../webfonts/Amatic_SC/AmaticSC-Regular", 400)
-+font-face("AmaticSC", "../webfonts/Amatic_SC/AmaticSC-Bold", 700)
+@include font('Neucha', normal, 400, '../webfonts/Neucha.woff2')
 
-+font-face("Arsenal", "../webfonts/Arsenal/Arsenal-Regular", 400)
-+font-face("Arsenal", "../webfonts/Arsenal/Arsenal-Italic", 500)
-+font-face("Arsenal", "../webfonts/Arsenal/Arsenal-Bold", 700)
-+font-face("Arsenal", "../webfonts/Arsenal/Arsenal-BoldItalic", 800)
+@include font('Arsenal', normal, 400, '../webfonts/Arsenal-Regular.woff2')
+@include font('Arsenal', normal, 700, '../webfonts/Arsenal-Bold.woff2')
+
+@include font('AmaticSC', normal, 400, '../webfonts/AmaticSC-Regular.woff2')
+@include font('AmaticSC', normal, 700, '../webfonts/AmaticSC-Bold.woff2')
